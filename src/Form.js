@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const yupForm = yup.object().shape({
     name: yup.string().required('name is required').min(2, 'name must be at least 2 characters'),
-    sauce: yup.string().oneOf(['tomato', 'bbq', 'veganalfredo'], 'Pick One'),
+    sauce: yup.string().oneOf(['tomato', 'bbq', 'veganAlfredo'], 'Pick One'),
     size: yup.string().oneOf(['Small', 'Medium', 'Large', 'Extra Large'], 'You Must Choose A Size'),
     special: yup.string(),
     spinach: yup.boolean(),
@@ -191,13 +191,6 @@ function Form() {
                 </p>
 
                 <p>
-                    <input
-                        id="toppings"
-                        type="checkbox"
-                        checked={form.cherrytomamtoes}
-                        onChange={inputChange}
-                        name="cherrytomatoes"
-                    />Cherry tomatoes
                     <input
                         id="toppings"
                         type="checkbox"

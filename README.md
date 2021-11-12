@@ -35,18 +35,25 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+   Answer:
+   You can also use useRouteMatch to access a match without rendering a Route. This is done by passing it the location argument.
+
 1. How would you explain form validation to someone who has never programmed before?
+   Answer: its the process of checking if your code is in compliance with the standards and recommendations set bt the W3C for the web.
 1. In 1-2 sentences, define end to end testing.
+
+Answer: this means testing everything in the entire application.
+Example Steps: analyze requirements of how the app is supposed to work in every aspect, set up a test enviroment in alighnment with all the requirements, analyze software and hardware requirements, list down how every system needs to respond etc.....
 
 ## Instructions
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Implement the project on the main branch, committing changes regularly
-- [ ] Push commits: `git push origin main`
-- [ ] PUSH EVERYTHING TO THE MAIN BRANCH
+- [x ] Create a forked copy of this project
+- [ x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [ x] Implement the project on the main branch, committing changes regularly
+- [ x] Push commits: `git push origin main`
+- [x ] PUSH EVERYTHING TO THE MAIN BRANCH
 
 ### Task 2: Project Requirements
 
@@ -63,6 +70,7 @@ Your finished project must include all of the following requirements:
 - [ ] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
 
 Data should look something like
+
 ```
 {
     name: string,
@@ -72,6 +80,7 @@ Data should look something like
     special: string,
 }
 ```
+
 where there is a key for name, size and special and they are strings
 and
 there is a key for each of the toppings and they are booleans
@@ -113,4 +122,5 @@ One of your goals is to return a database record of the order - for this you'll 
 Follow these steps for completing your project.
 
 Set up your fork on Github to codegrade following the instructions [here](https://lambdaschool.instructure.com/courses/1675/assignments/51399?module_item_id=617624), pushing commits to your main branch.
+
 - [ ] Your code will be reviewed over the next few days. Read [these instructions](https://www.notion.so/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a) to learn how to view feedback in CodeGrade.

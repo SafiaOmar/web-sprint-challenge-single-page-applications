@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const yupForm = yup.object().shape({
     name: yup.string().required('name is required').min(2, 'name must be at least 2 characters'),
-    sauce: yup.string().oneOf(['tomato', 'bbq', 'vegan alfredo'], 'Pick One'),
+    sauce: yup.string().oneOf(['tomato', 'bbq', 'veganalfredo'], 'Pick One'),
     size: yup.string().oneOf(['Small', 'Medium', 'Large', 'Extra Large'], 'You Must Choose A Size'),
     special: yup.string(),
     spinach: yup.boolean(),

@@ -7,14 +7,14 @@ import axios from 'axios';
 
 const yupForm = yup.object().shape({
     name: yup.string().required('name is required').min(2, 'name must be at least 2 characters'),
-    sauce: yup.string().oneOf(['tomato', 'bbq', 'alfredo'], 'Pick One'),
+    sauce: yup.string().oneOf(['tomato', 'bbq', 'vegan alfredo'], 'Pick One'),
     size: yup.string().oneOf(['Small', 'Medium', 'Large', 'Extra Large'], 'You Must Choose A Size'),
     special: yup.string(),
-    pepperoni: yup.boolean(),
-    sausage: yup.boolean(),
-    ham: yup.boolean(),
-    bacon: yup.boolean(),
+    spinach: yup.boolean(),
+    beyondmeatballs: yup.boolean(),
     pineapple: yup.boolean(),
+    raspeberries: yup.boolean(),
+    asparagus: yup.boolean(),
     mushroom: yup.boolean(),
     greenPepper: yup.boolean(),
     jalapeno: yup.boolean(),
@@ -26,11 +26,11 @@ const defaultVal = {
     sauce: "",
     size: "",
     special: "",
-    pepperoni: false,
-    sausage: false,
-    ham: false,
-    bacon: false,
-    pineapple: false,
+    spinach: false,
+   beyondmeatballs: false,
+   pineapple: false,
+   raspeberries: false,
+  asparagus: false,
     mushroom: false,
     greenPepper: false,
     jalapeno: false,
@@ -48,11 +48,11 @@ function Form() {
         sauce: "",
         size: "",
         special: "",
-        pepperoni: "",
-        sausage: "",
-        ham: "",
-        bacon: "",
+       spinach: "",
+      beyondmeatballs: "",
         pineapple: "",
+       raspeberries: "",
+       asparagus: "",
         mushroom: "",
         greenPepper: "",
         jalapeno: "",
@@ -136,11 +136,11 @@ function Form() {
                 /> BBQ
                 <input
                     type="radio"
-                    value="alfredo"
+                    value="Vegan alfredo"
                     name="sauce"
-                    checked={form.sauce === "alfredo"}
+                    checked={form.sauce === "vegan alfredo"}
                     onChange={inputChange}
-                /> Alfredo
+                /> Vegan Alfredo
 
                 <p><label htmlFor="size-dropdown">What Size Do You Want Your Pizza? </label>
                     <select id="size-dropdown" name="size" value={form.size} onChange={inputChange}>
@@ -158,33 +158,17 @@ function Form() {
                     <input
                         id="toppings"
                         type="checkbox"
-                        checked={form.pepperoni}
+                        checked={form.spinach}
                         onChange={inputChange}
-                        name="pepperoni"
-                    />Pepperoni
+                        name="spinach"
+                    />spinach
                     <input
                         id="toppings"
                         type="checkbox"
-                        checked={form.sausage}
+                        checked={form.beyondmeatballs}
                         onChange={inputChange}
-                        name="sausage"
-                    />Sausage
-                    <input
-                        id="toppings"
-                        type="checkbox"
-                        checked={form.ham}
-                        onChange={inputChange}
-                        name="ham"
-                    />Ham
-                    <input id="toppings"
-                        type="checkbox"
-                        checked={form.bacon}
-                        onChange={inputChange}
-                        name="bacon"
-                    />Bacon
-                </p>
-
-                <p>
+                        name="beyondmeatballs"
+                    />beyondmeatballs
                     <input
                         id="toppings"
                         type="checkbox"
@@ -192,6 +176,28 @@ function Form() {
                         onChange={inputChange}
                         name="pineapple"
                     />Pineapple
+                    <input id="toppings"
+                        type="checkbox"
+                        checked={form.raspeberries}
+                        onChange={inputChange}
+                        name="rasberries"
+                    />Raspeberries
+                    <input id="toppings"
+                        type="checkbox"
+                        checked={form.asparagus}
+                        onChange={inputChange}
+                        name="asparagus"
+                    />Asparagus
+                </p>
+
+                <p>
+                    <input
+                        id="toppings"
+                        type="checkbox"
+                        checked={form.cherrytomamtoes}
+                        onChange={inputChange}
+                        name="cherrytomatoes"
+                    />Cherry tomatoes
                     <input
                         id="toppings"
                         type="checkbox"
@@ -213,6 +219,13 @@ function Form() {
                         onChange={inputChange}
                         name="jalapeno"
                     />Jalapeno
+                    <input
+                        id="toppings"
+                        type="checkbox"
+                        checked={form.chocolate}
+                        onChange={inputChange}
+                        name="chocolate"
+                    />Chocolate
                 </p>
 
                 <p><label htmlFor="instructions">Special Instructions: </label>
